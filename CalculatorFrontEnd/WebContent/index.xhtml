@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+	<style>
+		.error {color: red;}
+	</style>
+	<h:head>
+		<title>Calculator Login Page</title>
+		<h1>Login</h1>
+	</h:head>
+	<h:body>
+		<h:form>
+			<h:message styleClass="error" for="username" /><br/>
+			<h:message styleClass="error" for="password"/><br/>
+			
+			<h:inputText id="username" value="#{login.username}" a:placeholder="username" required="true" validatorMessage="Please enter username"/><br/><br/>
+			<h:inputSecret id="password" value="#{password}" a:placeholder="password" required="true" validatorMessage="Please enter password"/><br/><br/>
+			<h:commandButton value="Login" action="basiccalculator"/>
+		</h:form>
+	</h:body>
+</html>
